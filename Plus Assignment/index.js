@@ -26,7 +26,7 @@ function displayWeather(response){
 }
 
 function searchCity (event){
-
+    event.preventDefault();
     let city = document.querySelector("#inlineFormInputGroupUsername").value;
     let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=8b2940a8dc3cd76e02df783cc567ef5e`;
     axios.get(apiUrl).then(displayWeather);

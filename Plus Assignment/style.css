@@ -57,7 +57,14 @@ p{
     font-size: 15pt;
 }
 
-a{  
+footer{
+    font-family: 'Raleway';
+    text-align: center;
+    padding-left: 300pt;
+    padding-right: 300pt;
+}
+
+#pin{  
     font-size: 20pt;
     text-align: right;
 }
@@ -93,4 +100,7 @@ a{
     padding-left: 20px;
     padding-right: -40px;
     padding-bottom: 50px;
+}
+#github{
+    font-family: "raleway";
 }
