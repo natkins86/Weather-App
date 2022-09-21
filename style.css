@@ -64,14 +64,40 @@ footer{
     padding-right: 300pt;
 }
 
+#units{
+    font-size: 20pt;
+    cursor: default;
+}
+
+#celcius-link{
+    text-decoration: none;
+    color: grey;
+    cursor: default;
+}
+
+#celcius-link:hover{
+    color:black;
+}
+
+#fahrenheit-link{
+    text-decoration: none;
+    color: grey;
+    cursor: default;
+}
+
+#fahrenheit-link:hover{
+    color:black;
+}
 #pin{  
     font-size: 20pt;
     text-align: right;
 }
 
-#units{
-    font-size: 20pt;
+#weather-image-today{
+    font-size: 40pt;
 }
+
+
 #sb-form{
     margin: auto;
 }
@@ -84,7 +110,6 @@ footer{
     padding-bottom: 50px;
     
 }
-
 .card-header{
     font-family: 'Raleway';
     background-color: grey;

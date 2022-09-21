@@ -15,15 +15,18 @@ let month = months[now.getMonth()];
 let days =["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 let day=days[now.getDay()];
 
-console.log(minutes);
+todayIs.innerHTML = `${day}, ${date}th of ${month}, ${hours}:${minute}`;
 
-todayIs.innerHTML = `${day}, ${date}th of ${month}, ${hours}:${minutes}`;
+//Location & Weather//
 
-//City Name + Click//
+
 
 function displayWeather(response){
     document.querySelector("#city").innerHTML =response.data.name;
     document.querySelector("#temp").innerHTML =Math.round(response.data.main.temp);
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    celciusTemperature = response.data.main.temp;
 }
 
 function searchCity (event){
@@ -42,28 +45,29 @@ function getCurrentLocation (event){
     navigator.geolocation.getCurrentPosition(searchLocation);
       }
 
-
-function convertToFahrenheitLink(event){
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temp");
-    let temperature = temperatureElement.innerHTML;
-    temperatureElement.innerHTML = Math.round((temperature*9)/5 +32);
-}
-
-function convertToCelciusLink(event){
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temp");
-    temperatureElement.innerHTML =35;
-}
-
+      function convertToFahrenheitLink(event){
+        event.preventDefault();
+        let temperatureElement = document.querySelector("#temp");
+        celciusLink.classList.remove("active");
+        fahrenheitLink.classList.add("active)");
+        let temperature = (celciusTemperature*9)/5 +32;
+        temperatureElement.innerHTML = Math.round(temperature);
+    }
+    
+    function convertToCelciusLink(event){
+        event.preventDefault();
+        let temperatureElement = document.querySelector("#temp");
+        celciusLink.classList.add("active");
+        fahrenheitLink.classList.remove("active)");
+        temperatureElement.innerHTML =Math.round(celciusTemperature);
+    }
 let currentLocationLink = document.querySelector("#here");
 currentLocationLink.addEventListener("click", getCurrentLocation);
 
 let searchForm = document.querySelector("#sb-form");
 searchForm.addEventListener("submit", searchCity);
 
-//Unit of Measure//
-
+let celciusTemperature = null
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheitLink);
@@ -71,7 +75,13 @@ fahrenheitLink.addEventListener("click", convertToFahrenheitLink);
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", convertToCelciusLink);
 
-//Name of city searched & current temp//
+
+//Unit of Measure//
+
+
+//Icons but 'funner'//
+
+
 
 
 
