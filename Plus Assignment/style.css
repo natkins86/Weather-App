@@ -1,0 +1,96 @@
+#app{
+    padding-top: 20px;
+}
+h1{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 35pt;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+h2{ 
+    text-align: right;
+    font-family: 'Raleway';
+    font-weight: bolder;
+    padding-right: 100px;
+    padding-left: 20px;   
+}
+
+h3{
+    font-family: 'Raleway';
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 50px;
+    padding-bottom: -10px;
+}
+
+h4{
+    font-family: 'Raleway';
+    font-size: 50pt;
+    font-weight: bolder;
+    padding-top: -10px;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
+h5{
+    display: block;
+    margin: auto;
+    font-family: 'Raleway';
+    font-size: 80px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+h6{
+    display: block;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    padding-bottom: 10px;
+}
+p{
+    display: block;
+    margin:auto;
+    font-family: 'Raleway';
+    font-size: 15pt;
+}
+
+a{  
+    font-size: 20pt;
+    text-align: right;
+}
+
+#units{
+    font-size: 20pt;
+}
+#sb-form{
+    margin: auto;
+}
+
+#weather-image-today {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+
+.card-header{
+    font-family: 'Raleway';
+    background-color: grey;
+    color: white;
+}
+#weather-card-tomorrow{
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+
+#weather-card-next {
+    padding-left: 20px;
+    padding-right: -40px;
+    padding-bottom: 50px;
+}
