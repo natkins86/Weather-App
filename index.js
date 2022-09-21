@@ -7,6 +7,7 @@ let date = now.getDate();
 
 let hours=now.getHours();
 let minutes=now.getMinutes();
+let minute = minutes <= 9 ? "0" + minutes : minutes;
 
 let months=["January", "February", "March","April", "May", "June", "July","August","September","October","November", "Decemeber"];
 let month = months[now.getMonth()];
@@ -46,7 +47,7 @@ function convertToFahrenheitLink(event){
     event.preventDefault();
     let temperatureElement = document.querySelector("#temp");
     let temperature = temperatureElement.innerHTML;
-    temperatureElement.innerHTML =(temperature*9)/5 +32;
+    temperatureElement.innerHTML = Math.round((temperature*9)/5 +32);
 }
 
 function convertToCelciusLink(event){
