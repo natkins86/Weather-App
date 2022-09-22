@@ -18,8 +18,34 @@ let day=days[now.getDay()];
 todayIs.innerHTML = `${day}, ${date}th of ${month}, ${hours}:${minute}`;
 
 //Location & Weather//
+function displayForecast(){
+    let forecastElement = document.querySelector("#forecast");
+    let forecastHTML = `<div class="row">`;
+    let days =["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    days.forEach(function(day){
+    forecastHTML= forecastHTML + `
+    <div class="col-sm-6" id="weather-card-tomorrow">
+        <div class="card" id="tomorrow">
+            <div class="card-header">${day}</div>
+            <h5>
+                ⛅ 
+            </h5>
+            <h6>
+                🌡️ 26°C - 37°C
+            </h6>
+        </div>
+    </div>
+    `;
+});
+forecastHTML = forecastHTML +`</div>`;
+forecastElement.innerHTML= forecastHTML;
+}
 
-
+function getForecast(coordinates){
+    let apiKey = "a43564c91a6c605aeb564c9ed02e3858";
+    let apiUrl =`https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${apiKey}`;
+    axios.get(apiUrl).then(displayForecast);
+}
 
 function displayWeather(response){
     document.querySelector("#city").innerHTML =response.data.name;
@@ -27,6 +53,9 @@ function displayWeather(response){
     let iconElement = document.querySelector("#icon");
     iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     celciusTemperature = response.data.main.temp;
+
+    getForecast(response.data.coord);
+    
 }
 
 function searchCity (event){
@@ -34,6 +63,7 @@ function searchCity (event){
     let city = document.querySelector("#inlineFormInputGroupUsername").value;
     let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=8b2940a8dc3cd76e02df783cc567ef5e`;
     axios.get(apiUrl).then(displayWeather);
+   
 }
 
 function searchLocation(position){
@@ -74,6 +104,8 @@ fahrenheitLink.addEventListener("click", convertToFahrenheitLink);
 
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", convertToCelciusLink);
+
+
 
 
 //Unit of Measure//
