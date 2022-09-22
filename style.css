@@ -1,4 +1,5 @@
 #app{
+    position: relative;
     padding-top: 20px;
 }
 h1{
@@ -38,6 +39,7 @@ h4{
     font-size: 50pt;
     font-weight: bolder;
     padding-left: 50px;
+    padding-bottom: 10px;
 
 }
 
@@ -78,45 +80,22 @@ footer{
     cursor: default;
 }
 
-#celcius-link{
-    text-decoration: none;
-    color: grey;
-    cursor: default;
-}
-
-#celcius-link:hover{
-    color:black;
-}
-
-#fahrenheit-link{
-    text-decoration: none;
-    color: grey;
-    cursor: default;
-}
-
-#fahrenheit-link:hover{
-    color:black;
-}
 #pin{  
     font-size: 20pt;
     text-align: right;
 }
-
-#weather-image-today{
-    font-size: 40pt;
-}
-
 
 #sb-form{
     margin: auto;
 }
 
 #weather-image-today {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    position: relative;
+    display: block;
+    margin:auto ;
+    font-family: 'Raleway';
+    padding-top: 30px;
+    text-align: center;
     
 }
 .card-header{
