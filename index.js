@@ -87,43 +87,17 @@ function getCurrentLocation (event){
     navigator.geolocation.getCurrentPosition(searchLocation);
       }
 
-      function convertToFahrenheitLink(event){
-        event.preventDefault();
-        let temperatureElement = document.querySelector("#temp");
-        celciusLink.classList.remove("active");
-        fahrenheitLink.classList.add("active)");
-        let temperature = (celciusTemperature*9)/5 +32;
-        temperatureElement.innerHTML = Math.round(temperature);
-    }
     
-    function convertToCelciusLink(event){
-        event.preventDefault();
-        let temperatureElement = document.querySelector("#temp");
-        celciusLink.classList.add("active");
-        fahrenheitLink.classList.remove("active)");
-        temperatureElement.innerHTML =Math.round(celciusTemperature);
-    }
 let currentLocationLink = document.querySelector("#here");
 currentLocationLink.addEventListener("click", getCurrentLocation);
 
 let searchForm = document.querySelector("#sb-form");
 searchForm.addEventListener("submit", searchCity);
 
-let celciusTemperature = null
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheitLink);
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", convertToCelciusLink);
 
 
 
 
-//Unit of Measure//
-
-
-//Icons but 'funner'//
 
 
 

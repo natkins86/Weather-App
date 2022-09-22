@@ -2,6 +2,7 @@
     padding-top: 20px;
 }
 h1{
+    position: relative;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 35pt;
@@ -10,6 +11,7 @@ h1{
     padding-right: 20px;
 }
 h2{ 
+    position: relative;
     text-align: right;
     font-family: 'Raleway';
     font-weight: bolder;
@@ -18,36 +20,37 @@ h2{
 }
 
 h3{
+    position: relative;
+    display: block;
+    margin:auto ;
     font-family: 'Raleway';
-    padding-top: 50px;
-    padding-left: 20px;
-    padding-right: 50px;
-    padding-bottom: -10px;
+    padding-top: 40px;
+    padding-left: 50px;
+    
+    
 }
 
 h4{
+    position: relative;
+    display: block;
+    margin:auto ;
     font-family: 'Raleway';
     font-size: 50pt;
     font-weight: bolder;
-    padding-top: -10px;
-    padding-left: 20px;
-    padding-right: 50px;
+    padding-left: 50px;
+
 }
 
-h5{
+img{
     display: block;
     margin: auto;
-    font-family: 'Raleway';
-    font-size: 80px;
-    padding-top: 10px;
-    padding-bottom: 5px;
 }
 
 h6{
     display: block;
     margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20pt;
+    font-family: 'Raleway';
+    font-size: 15pt;
     padding-bottom: 10px;
 }
 p{
@@ -58,12 +61,18 @@ p{
 }
 
 footer{
-    font-family: 'Raleway';
+    position: relative;
+    display: block;
+    margin: auto;
     text-align: center;
-    padding-left: 300pt;
-    padding-right: 300pt;
+    font-family: 'Raleway';
+    
 }
 
+#icon{
+    position: relative;
+    font-size:50pt;
+}
 #units{
     font-size: 20pt;
     cursor: default;
