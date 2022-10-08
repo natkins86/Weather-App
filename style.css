@@ -1,32 +1,40 @@
 #app{
+    display: block;
+    margin:auto; 
     position: relative;
     padding-top: 20px;
+    margin-top: 30px;
+    background-color: rgba(	128,119,119,0.1)
+
 }
 h1{
     position: relative;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
-    font-size: 35pt;
+    font-family: 'Inter';
+    font-weight: 200;
+    font-size: 30pt;
     padding-top: 30px;
     padding-left: 20px;
     padding-right: 20px;
 }
 h2{ 
     position: relative;
-    text-align: right;
-    font-family: 'Raleway';
+    text-align: center;
+    font-family: 'Inter';
     font-weight: bolder;
-    padding-right: 100px;
-    padding-left: 20px;   
+    padding-right: 20px;
+    font-weight: 500;
+  
 }
 
 h3{
     position: relative;
     display: block;
     margin:auto ;
-    font-family: 'Raleway';
+    font-family: 'Inter';
     padding-top: 40px;
     padding-left: 50px;
+    font-weight: 200;
     
     
 }
@@ -35,9 +43,9 @@ h4{
     position: relative;
     display: block;
     margin:auto ;
-    font-family: 'Raleway';
+    font-family: 'Inter';
     font-size: 50pt;
-    font-weight: bolder;
+    font-weight: 500;
     padding-left: 50px;
     padding-bottom: 10px;
 
@@ -51,15 +59,18 @@ img{
 h6{
     display: block;
     margin: auto;
-    font-family: 'Raleway';
+    font-family: 'Inter';
     font-size: 15pt;
     padding-bottom: 10px;
+    font-weight: 200;
 }
 p{
     display: block;
     margin:auto;
-    font-family: 'Raleway';
+    font-family: 'Inter';
     font-size: 15pt;
+    text-align: center;
+    font-weight:200;
 }
 
 footer{
@@ -67,7 +78,7 @@ footer{
     display: block;
     margin: auto;
     text-align: center;
-    font-family: 'Raleway';
+    font-family: 'Inter';
     
 }
 
@@ -93,27 +104,29 @@ footer{
     position: relative;
     display: block;
     margin:auto ;
-    font-family: 'Raleway';
+    font-family: 'Inter';
     padding-top: 30px;
     text-align: center;
     
 }
 .card-header{
-    font-family: 'Raleway';
-    background-color: grey;
+    font-family: 'Inter';
+    background-color: #807777;
     color: white;
+    font-weight: 200;
 }
 #weather-card-tomorrow{
-    padding-left: 40px;
+    padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 #weather-card-next {
     padding-left: 20px;
-    padding-right: -40px;
-    padding-bottom: 50px;
+    padding-right:20px;
+    padding-bottom: 20px;
 }
 #github{
-    font-family: "Raleway";
+    font-family: 'Inter';
+    font-weight: 200;
 }

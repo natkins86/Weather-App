@@ -35,8 +35,8 @@ function displayForecast(response){
         if(index<4){
     forecastHTML= forecastHTML + 
     `
-    <div class="col-sm-6" id="weather-card-tomorrow">
-        <div class="card" id="tomorrow">
+    <div class="col-sm-6 align-content-center " id="weather-card-tomorrow">
+        <div class="card border-0 shadow-sm" id="tomorrow">
             <div class="card-header">${formatDay(forecastDay.dt)}</div>
             <img src= "http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
             alt="" 
@@ -78,6 +78,17 @@ function searchCity (event){
    
 }
 
+function search(city) {
+    let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=8b2940a8dc3cd76e02df783cc567ef5e`;
+    axios.get(apiUrl).then(displayWeather);
+   
+  }
+  
+  function handleSubmit(event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#inlineFormInputGroupUsername");
+    search(cityInputElement.value);
+  }
 
 function searchLocation(position){
     let apiUrl= `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=8b2940a8dc3cd76e02df783cc567ef5e`;
@@ -94,7 +105,8 @@ currentLocationLink.addEventListener("click", getCurrentLocation);
 let searchForm = document.querySelector("#sb-form");
 searchForm.addEventListener("submit", searchCity);
 
-
+search("Austin");
+displayForecast();
 
 
 
